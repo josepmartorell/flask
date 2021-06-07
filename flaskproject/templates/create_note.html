@@ -1,0 +1,40 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="note-editor">
+  <div class="panel panel-default note-editor__panel">
+    <div class="panel-heading note-editor__header">
+      <h1 class="panel-title note-editor__panel-title">
+        <span>Create New Note</span>
+      </h1>
+    </div>
+
+    <form method="POST" action="/new-note"> <!--action is the endpoint or the view-->
+      {{form.csrf_token()}}
+      <div class="panel-body note-editor__panel-body">
+        {% if form.errors %}
+        <p class="validation-summary-errors">Please enter a correct user name and password.</p>
+        {% endif %}
+        <div class="form-group">
+          <label class="note-editor__input-label" for="id_subject">Subject</label>
+          {{form.subject(class="form-control note-editor__subject-input", id ="id_subject")}} 
+        </div>
+        <div class="form-group">
+          <label class="note-editor__input-label" for="id_detail">Your Note</label>
+          {{form.detail(class="form-control note-editor__detail-input", rows ="12", cols="20", id="id_detail")}}
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <div class="note-editor__flex-container">
+          <a class="btn btn-sm note-editor__button" href="{{ url_for('home') }}">Cancel </a>
+          <button class="btn btn-sm note-editor__button" type="submit">Save Note</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

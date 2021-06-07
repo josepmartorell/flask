@@ -1,0 +1,5 @@
+flask>=1.0.0
+flask_sqlalchemy
+flask_migrate
+flask_wtf
+psycopg2-binary
