@@ -1,16 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} - Notely App</title>
-  <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+  <title>{{ title }} - Flask App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/f90668c4c4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class="navbar navbar-default navbar-fixed-top">
+
+<!-- Navbar -->
+<div class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,14 +25,23 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/" class="navbar-brand" style="font-size: 30px; font-weight: 500;">
-        <span style="color: #008080;">Note</span><span style="color: black;">ly</span>
+        <span style="color: #005A87;">Flask</span><span style="color: black;">App</span>
       </a>
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
-        <li><a href="{{ url_for('create_note') }}" style="color: #008080;">New Note</a></li>
+        <li><a href="{{ url_for('create_note') }}" style="color: #005A87;">New Note</a></li>
       </ul>
     </div>
+  </div>
+</div>
+
+<!-- Justified Button Groups -->
+<div class="container">
+  <div class="btn-group btn-group-justified">
+    <a href="{{ url_for('create_note') }}" class="btn btn-primary">New Note</a>
+    <a href="#" class="btn btn-primary">Upload File</a>
+    <a href="#" class="btn btn-primary">Create Alert</a>
   </div>
 </div>
 
@@ -38,9 +53,6 @@
   </footer>
 </div>
 
-<script src="/static/scripts/jquery-3.6.0.slim.js"></script>
-<script src="/static/scripts/bootstrap.bundle.js"></script>
-{% block scripts %}{% endblock %}
-
 </body>
+
 </html>
