@@ -27,9 +27,12 @@
       </div>
 
       <div class="panel-footer">
-        <div class="note-editor__flex-container">
-          <a class="btn btn-sm note-editor__button" href="{{ url_for('home') }}">Cancel </a>
-          <button class="btn btn-sm note-editor__button" type="submit">Save Note</button>
+
+        <div class="btn-group btn-group-justified">
+          <div class="note-editor__flex-container">
+            <a class="btn btn-sm note-editor__button btn-primary" href="{{ url_for('home') }}">Cancel </a>
+            <button class="btn btn-sm note-editor__button btn-primary" type="submit">Save Note</button>
+          </div>
         </div>
       </div>
     </form>

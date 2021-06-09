@@ -29,12 +29,12 @@
           You don't have any notes. Click on the button below to create a note.
         </h3>
       </div>
+
   {% endif %}
+    <div class="index__new-note-button-wrapper button-separation" align="right">
+        <a href="{{ url_for('create_note') }}"><button type="button" class="btn btn-primary btn-sm">Create Note</button></a>
+    </div>
 
-  <div class="index__new-note-button-wrapper">
-    <a href="{{ url_for('create_note') }}" class="index__new-note-button">New Note</a>
-  </div>
 </div>
-
 
 {% endblock %}

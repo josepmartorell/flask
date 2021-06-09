@@ -8,15 +8,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
   <script src="https://kit.fontawesome.com/f90668c4c4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <!-- Navbar -->
-<div class="navbar navbar-default">
+<div class="navbar navbar-default fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,15 +32,6 @@
         <li><a href="{{ url_for('create_note') }}" style="color: #005A87;">New Note</a></li>
       </ul>
     </div>
-  </div>
-</div>
-
-<!-- Justified Button Groups -->
-<div class="container">
-  <div class="btn-group btn-group-justified">
-    <a href="{{ url_for('create_note') }}" class="btn btn-primary">New Note</a>
-    <a href="#" class="btn btn-primary">Upload File</a>
-    <a href="#" class="btn btn-primary">Create Alert</a>
   </div>
 </div>
 
