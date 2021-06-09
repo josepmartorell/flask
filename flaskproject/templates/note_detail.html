@@ -5,54 +5,60 @@
 <div class="note-detail">
   <div class="panel panel-default note-detail__panel">
     <div class="panel-heading note-detail__panel-header">
-      <h1 class="panel-title note-detail__panel-title">
-        {{note.subject}}
-      </h1>
+      <div>
+        <span>
+          <strong>Subject: </strong>
+        </span>
+      </div>
+      <div>
+        <span class="panel-title note-detail__panel-title">
+            {{note.subject}}
+        </span>
+      </div>
     </div>
     <div class="panel-body">
       <div class="note-detail__date-section">
         <div>
           <span class="note-detail__created-date-key">
-            Created On:
+            <strong>Created On: </strong>
           </span>
+        </div>
+        <div>
           <span class="note-detail__created-date-value">
             {{note.created_date}}
           </span>
         </div>
         <div>
           <span class="note-detail__modified-date-key">
-            Last Modified On:
+            <strong>Last Modified On: </strong>
           </span>
-          <span class="note-detail__modified-date-value">
-            {{note.last_modified}}
-          </span>
+        </div>
+        <div>
+            <span class="note-detail__modified-date-value">
+              {{note.last_modified}}
+            </span>
         </div>
       </div>
       <hr />
+      <label><strong>Detail: </strong></label>
       <div>
         {{note.detail}}
       </div>
     </div>
     <div class="panel-footer note-detail__footer">
-      <div class="note-detail__flex-container">
-        <div>
-          <a class="note-detail__button" href="{{ url_for('home') }}">
-            Back to List
-          </a>
+      <!-- Justified Button Groups -->
+        <div class="btn-group btn-group-justified note-detail__button">
+          <a href="{{ url_for('home') }}" class="btn btn-primary">Back to List</a>
+          <a href="/note/{{note.id}}/edit/" class="btn btn-primary">Edit Note</a>
+          <a href="/note/{{note.id}}/delete/" class="btn btn-primary">Delete Note</a>
         </div>
-        <div>
-          <a class="note-detail__button" href="/note/{{note.id}}/edit/">
-            Edit Note
-          </a>
-        </div>
-        <div>
-          <a class="note-detail__button" href="/note/{{note.id}}/delete/">
-            Delete Note
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
 {% endblock %}
+
+
+
+
+
